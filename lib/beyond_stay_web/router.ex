@@ -17,7 +17,7 @@ defmodule BeyondStayWeb.Router do
   scope "/", BeyondStayWeb do
     pipe_through :browser
 
-    get "/", PageController, :home
+    live "/", Live.HomeLive, :index
   end
 
   # Other scopes may use custom stacks.

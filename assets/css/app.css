@@ -3,3 +3,175 @@
 @import "tailwindcss/utilities";
 
 /* This file is for your main application CSS */
+/* app.css */
+
+/* Define custom CSS variables for color scheme */
+:root {
+    --primary-color: #eb6868;
+    --secondary-color: #146ebb;
+    --accent-color: #fbcd40;
+    --highlight-color: #04d8fe;
+    --dark-accent-color: #9859e6;
+    --light-accent-color: #8867e7;
+    --background-color: #f4f4f4;
+    /* Light background color for contrast */
+    --text-color: #333;
+    /* Dark text color for readability */
+    --heading-color: var(--secondary-color);
+    /* Heading color */
+    --button-color: var(--primary-color);
+    --button-hover-color: var(--secondary-color);
+    --link-color: var(--secondary-color);
+    --link-hover-color: var(--highlight-color);
+    --border-color: #ddd;
+    /* Light gray border for elements */
+}
+
+/* General Body Styles */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: var(--heading-color);
+}
+
+/* Navigation */
+nav {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 15px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: var(--highlight-color);
+    color: var(--secondary-color);
+}
+
+/* Buttons */
+button {
+    background-color: var(--button-color);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--button-hover-color);
+}
+
+/* Links */
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--link-hover-color);
+}
+
+/* Cards and Containers */
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
+}
+
+.card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    color: var(--highlight-color);
+}
+
+/* Forms */
+input,
+select,
+textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--highlight-color);
+    outline: none;
+}
+
+/* Additional Utility Classes */
+.bg-primary {
+    background-color: var(--primary-color);
+}
+
+.bg-secondary {
+    background-color: var(--secondary-color);
+}
+
+.bg-accent {
+    background-color: var(--accent-color);
+}
+
+.text-primary {
+    color: var(--primary-color);
+}
+
+.text-secondary {
+    color: var(--secondary-color);
+}
+
+.text-accent {
+    color: var(--accent-color);
+}
+
+.text-highlight {
+    color: var(--highlight-color);
+}
+
+.text-dark-accent {
+    color: var(--dark-accent-color);
+}
+
+.text-light-accent {
+    color: var(--light-accent-color);
+}
