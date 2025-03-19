@@ -4,174 +4,220 @@
 
 /* This file is for your main application CSS */
 /* app.css */
+/**
+ * Beyond Stay Theme
+ * Color Palette:
+ * - Primary Blue: #2E8BC0
+ * - Light Blue: #A4D7E1
+ * - Background: #F2F4F1
+ * - Accent Peach: #F6C9A8
+ * - Call-to-Action: #D95B43
+ */
 
-/* Define custom CSS variables for color scheme */
 :root {
-    --primary-color: #eb6868;
-    --secondary-color: #146ebb;
-    --accent-color: #fbcd40;
-    --highlight-color: #04d8fe;
-    --dark-accent-color: #9859e6;
-    --light-accent-color: #8867e7;
-    --background-color: #f4f4f4;
-    /* Light background color for contrast */
-    --text-color: #333;
-    /* Dark text color for readability */
-    --heading-color: var(--secondary-color);
-    /* Heading color */
-    --button-color: var(--primary-color);
-    --button-hover-color: var(--secondary-color);
-    --link-color: var(--secondary-color);
-    --link-hover-color: var(--highlight-color);
-    --border-color: #ddd;
-    /* Light gray border for elements */
+    /* Color Variables */
+    --bs-primary: #2E8BC0;
+    --bs-secondary: #A4D7E1;
+    --bs-background: #F2F4F1;
+    --bs-accent: #F6C9A8;
+    --bs-cta: #D95B43;
+    --bs-text: #333333;
+    --bs-text-light: #FFFFFF;
+
+    /* Spacing Variables */
+    --bs-spacing-sm: 0.5rem;
+    --bs-spacing-md: 1rem;
+    --bs-spacing-lg: 1.5rem;
+    --bs-spacing-xl: 2rem;
+
+    /* Border Radius */
+    --bs-radius-sm: 0.25rem;
+    --bs-radius-md: 0.5rem;
+    --bs-radius-lg: 0.75rem;
+    --bs-radius-full: 9999px;
 }
 
-/* General Body Styles */
+/* Base Styles */
 body {
-    background-color: var(--background-color);
-    color: var(--text-color);
-    font-family: Arial, sans-serif;
+    background-color: var(--bs-background);
+    color: var(--bs-text);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.5;
 }
 
-/* Header */
-header {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 20px;
-    text-align: center;
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--bs-primary);
+    font-weight: 700;
+    margin-bottom: var(--bs-spacing-md);
 }
 
-header h1 {
-    font-size: 2.5rem;
-    color: var(--heading-color);
+h1 {
+    font-size: 2rem;
 }
 
-/* Navigation */
-nav {
-    background-color: var(--secondary-color);
-    color: white;
-    padding: 10px;
+h2 {
+    font-size: 1.75rem;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-    margin: 0 15px;
-    border-radius: 5px;
-}
-
-nav a:hover {
-    background-color: var(--highlight-color);
-    color: var(--secondary-color);
-}
-
-/* Buttons */
-button {
-    background-color: var(--button-color);
-    color: white;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: var(--button-hover-color);
+h3 {
+    font-size: 1.5rem;
 }
 
 /* Links */
 a {
-    color: var(--link-color);
+    color: var(--bs-primary);
     text-decoration: none;
+    transition: color 0.2s ease;
 }
 
 a:hover {
-    color: var(--link-hover-color);
+    color: var(--bs-cta);
 }
 
-/* Cards and Containers */
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: var(--bs-radius-md);
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background-color: var(--bs-primary);
+    color: var(--bs-text-light);
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+}
+
+.btn-cta {
+    background-color: var(--bs-cta);
+    color: var(--bs-text-light);
+}
+
+.btn-cta:hover {
+    opacity: 0.9;
+}
+
+/* Cards */
 .card {
     background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border: 1px solid var(--border-color);
+    border-radius: var(--bs-radius-md);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: var(--bs-spacing-lg);
+    margin-bottom: var(--bs-spacing-lg);
 }
 
-.card:hover {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+.card-primary {
+    border-top: 4px solid var(--bs-primary);
 }
 
-/* Footer */
-footer {
-    background-color: var(--secondary-color);
-    color: white;
-    padding: 20px;
-    text-align: center;
+.card-cta {
+    border-top: 4px solid var(--bs-cta);
 }
 
-footer a {
-    color: white;
+/* Panels */
+.panel-primary {
+    background-color: var(--bs-secondary);
+    border-radius: var(--bs-radius-md);
+    padding: var(--bs-spacing-lg);
 }
 
-footer a:hover {
-    color: var(--highlight-color);
+.panel-accent {
+    background-color: var(--bs-accent);
+    border-radius: var(--bs-radius-md);
+    padding: var(--bs-spacing-lg);
 }
 
-/* Forms */
-input,
-select,
-textarea {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid var(--border-color);
-    width: 100%;
-    margin-bottom: 10px;
+/* Utility Classes */
+.text-primary {
+    color: var(--bs-primary);
 }
 
-input:focus,
-select:focus,
-textarea:focus {
-    border-color: var(--highlight-color);
-    outline: none;
+.text-cta {
+    color: var(--bs-cta);
 }
 
-/* Additional Utility Classes */
 .bg-primary {
-    background-color: var(--primary-color);
+    background-color: var(--bs-primary);
 }
 
 .bg-secondary {
-    background-color: var(--secondary-color);
+    background-color: var(--bs-secondary);
 }
 
 .bg-accent {
-    background-color: var(--accent-color);
+    background-color: var(--bs-accent);
 }
 
-.text-primary {
-    color: var(--primary-color);
+.bg-cta {
+    background-color: var(--bs-cta);
 }
 
-.text-secondary {
-    color: var(--secondary-color);
+/* Responsive Container */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--bs-spacing-md);
 }
 
-.text-accent {
-    color: var(--accent-color);
+/* Flex Utilities */
+.flex-row {
+    display: flex;
+    flex-direction: row;
 }
 
-.text-highlight {
-    color: var(--highlight-color);
+.flex-col {
+    display: flex;
+    flex-direction: column;
 }
 
-.text-dark-accent {
-    color: var(--dark-accent-color);
+.flex-wrap {
+    flex-wrap: wrap;
 }
 
-.text-light-accent {
-    color: var(--light-accent-color);
+.items-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.gap-sm {
+    gap: var(--bs-spacing-sm);
+}
+
+.gap-md {
+    gap: var(--bs-spacing-md);
+}
+
+.gap-lg {
+    gap: var(--bs-spacing-lg);
+}
+
+/* Responsive Utilities */
+@media (min-width: 768px) {
+    .md\:flex-row {
+        flex-direction: row;
+    }
+
+    .md\:flex-col {
+        flex-direction: column;
+    }
 }
